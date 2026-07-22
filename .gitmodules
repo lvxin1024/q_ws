@@ -1,6 +1,6 @@
 [submodule "src/RoboTamer4Qmini"]
-	path = src/RoboTamer4Qmini
-	url = git@github.com:lvxin1024/RoboTamer4Qmini.git
+	path = src/tamer
+	url = https://github.com/lvxin1024/RoboTamer.git
 [submodule "src/unitree_actuator_sdk"]
 	path = src/unitree_actuator_sdk
 	url = https://github.com/unitreerobotics/unitree_actuator_sdk.git

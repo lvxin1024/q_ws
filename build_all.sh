@@ -35,7 +35,17 @@ else
   echo "[WARN] spdlog/fmt not fully found."
   echo "[WARN] Build unitree_sdk2 with examples disabled to avoid missing-header failures."
   echo "[INFO] Use --cmake-clean-cache to avoid stale CMake cache conflicts."
-  colcon build --base-paths src --cmake-clean-cache --cmake-args -DBUILD_EXAMPLES=OFF "$@"
+
+  if echo "$PKGS" | grep -qx "unitree_sdk2"; then
+    echo "[INFO] Build non-unitree_sdk2 packages first (default settings)."
+    colcon build --base-paths src --cmake-clean-cache --packages-skip unitree_sdk2 "$@"
+
+    echo "[INFO] Build unitree_sdk2 only with BUILD_EXAMPLES=OFF."
+    colcon build --base-paths src --cmake-clean-cache --packages-select unitree_sdk2 --cmake-args -DBUILD_EXAMPLES=OFF "$@"
+  else
+    echo "[INFO] unitree_sdk2 not found in workspace. Build all packages with default settings."
+    colcon build --base-paths src --cmake-clean-cache "$@"
+  fi
 fi
 
 EXPECTED="$(colcon list --base-paths src --names-only | sort)"
