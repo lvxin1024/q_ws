@@ -1,0 +1,9 @@
+[submodule "src/RoboTamer4Qmini"]
+	path = src/RoboTamer4Qmini
+	url = git@github.com:lvxin1024/RoboTamer4Qmini.git
+[submodule "src/unitree_actuator_sdk"]
+	path = src/unitree_actuator_sdk
+	url = https://github.com/unitreerobotics/unitree_actuator_sdk.git
+[submodule "src/unitree_sdk2"]
+	path = src/unitree_sdk2
+	url = https://github.com/unitreerobotics/unitree_sdk2.git

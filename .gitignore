@@ -1,0 +1,6 @@
+build/
+install/
+log/
+venv/
+qmini-venv/
+src/onnxruntime-linux-aarch64-1.17.1/
