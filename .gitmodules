@@ -3,7 +3,7 @@
 	url = https://github.com/lvxin1024/RoboTamer.git
 [submodule "src/unitree_actuator_sdk"]
 	path = src/unitree_actuator_sdk
-	url = https://github.com/unitreerobotics/unitree_actuator_sdk.git
+	url = https://github.com/lvxin1024/unitree_actuator_sdk.git
 [submodule "src/unitree_sdk2"]
 	path = src/unitree_sdk2
-	url = https://github.com/unitreerobotics/unitree_sdk2.git
+	url = https://github.com/lvxin1024/unitree_sdk2.git
